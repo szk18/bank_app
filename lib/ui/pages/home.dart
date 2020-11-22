@@ -8,6 +8,16 @@ class Home extends StatelessWidget {
       appBar: AppBar(),
       drawer: MyDrawer(),
       body: Container(
+        decoration: BoxDecoration(
+            gradient: LinearGradient(
+          begin: FractionalOffset.topCenter,
+          end: FractionalOffset.bottomCenter,
+          colors: [Colors.blue, Colors.white],
+          stops: const [
+            0.0,
+            0.9,
+          ],
+        )),
         child: Center(child: Text('home page.')),
       ),
     );
