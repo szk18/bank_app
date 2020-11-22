@@ -1,8 +1,14 @@
-import 'package:bank_app/ui/pages/home.dart';
+import 'package:bank_app/models/navigation_model.dart';
+import 'package:bank_app/ui/pages/root.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(MultiProvider(providers: [
+    ChangeNotifierProvider(
+      create: (_) => NavigationModel(),
+    ),
+  ], child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -13,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: Home(),
+      home: Root(),
     );
   }
 }
