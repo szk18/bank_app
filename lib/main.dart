@@ -1,3 +1,4 @@
+import 'package:bank_app/common/theme.dart';
 import 'package:bank_app/models/navigation_model.dart';
 import 'package:bank_app/ui/pages/root.dart';
 import 'package:flutter/material.dart';
@@ -16,9 +17,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
+      theme: appTheme,
       home: Root(),
     );
   }
