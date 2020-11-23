@@ -20,6 +20,7 @@ class Root extends StatelessWidget {
       body: _pageList[context.watch<NavigationModel>().currentIndex],
       bottomNavigationBar: BottomNavigationBar(
           onTap: (int index) => context.read<NavigationModel>().update(index),
+          currentIndex: context.watch<NavigationModel>().currentIndex,
           items: const [
             BottomNavigationBarItem(
                 icon: Icon(Icons.monetization_on_outlined), label: '現在高'),
