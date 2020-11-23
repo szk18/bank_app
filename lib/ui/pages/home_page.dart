@@ -17,29 +17,29 @@ class InfoCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      shape: RoundedRectangleBorder(
+      shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.all(Radius.circular(10.0)),
       ),
       margin: const EdgeInsets.fromLTRB(40, 160, 40, 60),
       elevation: 2,
-      shadowColor: Colors.lightBlueAccent,
+      shadowColor: Theme.of(context).accentColor,
       child: Column(
         children: [
-          FlutterLogo(
+          const FlutterLogo(
             size: 80,
           ),
           CurrentBalanceText(),
           Container(
-            child: Text(
+            child: const Text(
               '\\ 999999',
               style: TextStyle(fontSize: 40, color: Colors.blue),
             ),
           ),
-          Text(
+          const Text(
             '※これはクローンアプリです。',
             style: TextStyle(fontSize: 10),
           ),
-          Divider(),
+          const Divider(),
           UserInfo(),
         ],
       ),
@@ -54,15 +54,15 @@ class CurrentBalanceText extends StatelessWidget {
       margin: const EdgeInsets.symmetric(vertical: 20, horizontal: 90),
       decoration: const BoxDecoration(
           color: Colors.blue,
-          borderRadius: BorderRadius.all(Radius.circular(10.0))),
+          borderRadius: BorderRadius.all(Radius.circular(10))),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
-        children: const [
+        children: [
           Icon(
             Icons.monetization_on_outlined,
-            color: Colors.white,
+            color: Theme.of(context).iconTheme.color,
           ),
-          Text(
+          const Text(
             '現在高',
             style: TextStyle(color: Colors.white),
           ),

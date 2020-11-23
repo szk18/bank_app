@@ -26,9 +26,7 @@ class MyDrawer extends StatelessWidget {
                   padding: const EdgeInsets.all(8),
                   itemCount: _listItems.length,
                   separatorBuilder: (BuildContext context, int index) =>
-                      const Divider(
-                        color: Colors.white,
-                      ),
+                      Divider(color: Theme.of(context).dividerColor),
                   itemBuilder: (BuildContext context, int index) {
                     return ListTile(
                       onTap: () => {
@@ -47,9 +45,9 @@ class MyDrawer extends StatelessWidget {
                         style: const TextStyle(
                             fontWeight: FontWeight.bold, color: Colors.white),
                       ),
-                      trailing: const Icon(
-                        Icons.arrow_forward_ios,
-                        color: Colors.white,
+                      trailing: Icon(
+                        Icons.arrow_forward_outlined,
+                        color: Theme.of(context).iconTheme.color,
                       ),
                     );
                   }),

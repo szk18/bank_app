@@ -59,7 +59,7 @@ class NavigationControls extends StatelessWidget {
                           // ignore: deprecated_member_use
                           Scaffold.of(context).showSnackBar(
                             const SnackBar(
-                                content: Text("No back history item")),
+                                content: Text('No back history item')),
                           );
                           return;
                         }
@@ -76,7 +76,7 @@ class NavigationControls extends StatelessWidget {
                           // ignore: deprecated_member_use
                           Scaffold.of(context).showSnackBar(
                             const SnackBar(
-                                content: Text("No forward history item")),
+                                content: Text('No forward history item')),
                           );
                           return;
                         }

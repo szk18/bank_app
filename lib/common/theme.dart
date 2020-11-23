@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 
 final appTheme = ThemeData(
   primarySwatch: Colors.blue,
+  primaryColorLight: Colors.lightBlueAccent,
+  buttonColor: Colors.white,
+  dividerColor: Colors.white,
+  iconTheme: const IconThemeData(color: Colors.white),
   visualDensity: VisualDensity.adaptivePlatformDensity,
 );
 
