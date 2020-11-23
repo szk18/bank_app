@@ -15,6 +15,7 @@ class Root extends StatelessWidget {
       appBar: AppBar(
         title: const Text('*****-****0000'),
         centerTitle: true,
+        elevation: 0,
       ),
       drawer: MyDrawer(),
       body: _pageList[context.watch<NavigationModel>().currentIndex],

@@ -5,9 +5,16 @@ class GraphPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: blueGradationBoxDecoration,
-      child: const Center(
-        child: Icon(Icons.insert_chart_outlined),
+      color: Theme.of(context).primaryColor,
+      constraints: const BoxConstraints.expand(),
+      child: const Card(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.vertical(top: Radius.circular(10)),
+        ),
+        color: Colors.white,
+        margin: EdgeInsets.zero,
+        elevation: 0,
+        child: FlutterLogo(),
       ),
     );
   }
