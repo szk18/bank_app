@@ -1,3 +1,4 @@
+import 'package:bank_app/ui/widgets/my_web_view.dart';
 import 'package:flutter/material.dart';
 
 class MyDrawer extends StatelessWidget {
@@ -30,6 +31,17 @@ class MyDrawer extends StatelessWidget {
                       ),
                   itemBuilder: (BuildContext context, int index) {
                     return ListTile(
+                      onTap: () => {
+                        print('tapped! at $index'),
+                        Navigator.of(context).push(
+                          MaterialPageRoute<void>(
+                            builder: (BuildContext context) => MyWebView(
+                              title: _listItems[index],
+                              url: 'https://google.com',
+                            ),
+                          ),
+                        ),
+                      },
                       title: Text(
                         _listItems[index],
                         style: const TextStyle(
