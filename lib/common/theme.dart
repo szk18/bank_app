@@ -5,7 +5,7 @@ final appTheme = ThemeData(
   visualDensity: VisualDensity.adaptivePlatformDensity,
 );
 
-final blueGradationBoxDecoration = BoxDecoration(
+const blueGradationBoxDecoration = BoxDecoration(
   gradient: LinearGradient(
     begin: FractionalOffset.topCenter,
     end: FractionalOffset.bottomCenter,

@@ -6,7 +6,7 @@ class DetailPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: blueGradationBoxDecoration,
-      child: Center(
+      child: const Center(
         child: Icon(
           Icons.receipt_long_outlined,
         ),

@@ -13,14 +13,14 @@ class Root extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('*****-****0000'),
+        title: const Text('*****-****0000'),
         centerTitle: true,
       ),
       drawer: MyDrawer(),
       body: _pageList[context.watch<NavigationModel>().currentIndex],
       bottomNavigationBar: BottomNavigationBar(
           onTap: (int index) => context.read<NavigationModel>().update(index),
-          items: [
+          items: const [
             BottomNavigationBarItem(
                 icon: Icon(Icons.monetization_on_outlined), label: '現在高'),
             BottomNavigationBarItem(

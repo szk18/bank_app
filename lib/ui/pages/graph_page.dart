@@ -6,7 +6,7 @@ class GraphPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: blueGradationBoxDecoration,
-      child: Center(
+      child: const Center(
         child: Icon(Icons.insert_chart_outlined),
       ),
     );

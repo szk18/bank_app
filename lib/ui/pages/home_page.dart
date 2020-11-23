@@ -51,13 +51,13 @@ class CurrentBalanceText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(vertical: 20, horizontal: 90),
-      decoration: BoxDecoration(
+      margin: const EdgeInsets.symmetric(vertical: 20, horizontal: 90),
+      decoration: const BoxDecoration(
           color: Colors.blue,
           borderRadius: BorderRadius.all(Radius.circular(10.0))),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
-        children: [
+        children: const [
           Icon(
             Icons.monetization_on_outlined,
             color: Colors.white,
