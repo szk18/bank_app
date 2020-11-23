@@ -1,24 +1,35 @@
 import 'package:bank_app/common/theme.dart';
 import 'package:bank_app/models/navigation_model.dart';
+import 'package:bank_app/ui/pages/login_page.dart';
 import 'package:bank_app/ui/pages/root.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 void main() {
-  runApp(MultiProvider(providers: [
-    ChangeNotifierProvider(
-      create: (_) => NavigationModel(),
+  runApp(
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(
+          create: (_) => NavigationModel(),
+        ),
+      ],
+      child: MyApp(),
     ),
-  ], child: MyApp()));
+  );
 }
 
 class MyApp extends StatelessWidget {
+  final Map<String, Widget Function(BuildContext)> _routes = {
+    '/': (context) => LoginPage(),
+    '/root': (context) => Root(),
+  };
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: appTheme,
-      home: Root(),
+      routes: _routes,
     );
   }
 }
