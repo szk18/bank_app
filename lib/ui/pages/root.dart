@@ -12,18 +12,21 @@ class Root extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: Text('*****-****0000'),
+        centerTitle: true,
+      ),
       drawer: MyDrawer(),
       body: _pageList[context.watch<NavigationModel>().currentIndex],
       bottomNavigationBar: BottomNavigationBar(
           onTap: (int index) => context.read<NavigationModel>().update(index),
           items: [
             BottomNavigationBarItem(
-                icon: Icon(Icons.monetization_on_outlined), label: ''),
+                icon: Icon(Icons.monetization_on_outlined), label: '現在高'),
             BottomNavigationBarItem(
-                icon: Icon(Icons.receipt_long_outlined), label: ''),
+                icon: Icon(Icons.receipt_long_outlined), label: '明細'),
             BottomNavigationBarItem(
-                icon: Icon(Icons.insert_chart_outlined), label: ''),
+                icon: Icon(Icons.insert_chart_outlined), label: 'グラフ'),
           ]),
     );
   }
