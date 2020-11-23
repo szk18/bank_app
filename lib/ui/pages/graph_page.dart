@@ -9,7 +9,7 @@ class GraphPage extends StatelessWidget {
       color: Theme.of(context).primaryColor,
       constraints: const BoxConstraints.expand(),
       child: Card(
-        shape: RoundedRectangleBorder(
+        shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.vertical(top: Radius.circular(10)),
         ),
         color: Colors.white,
