@@ -3,6 +3,7 @@ import 'package:bank_app/model/navigation_model.dart';
 import 'package:bank_app/view/page/login_page.dart';
 import 'package:bank_app/view/page/root.dart';
 import 'package:bank_app/viewmodel/auth_view_model.dart';
+import 'package:bank_app/viewmodel/navigation_view_model.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -10,7 +11,7 @@ void main() {
   runApp(
     MultiProvider(
       providers: [
-        ChangeNotifierProvider(create: (_) => NavigationModel()),
+        ChangeNotifierProvider(create: (_) => NavigationViewModel()),
         ChangeNotifierProvider(create: (_) => AuthViewModel())
       ],
       child: MyApp(),

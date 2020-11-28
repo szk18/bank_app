@@ -3,6 +3,7 @@ import 'package:bank_app/view/page/detail_page.dart';
 import 'package:bank_app/view/page/graph_page.dart';
 import 'package:bank_app/view/page/home_page.dart';
 import 'package:bank_app/view/widget/my_drawer.dart';
+import 'package:bank_app/viewmodel/navigation_view_model.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -18,10 +19,11 @@ class Root extends StatelessWidget {
         elevation: 0,
       ),
       drawer: MyDrawer(),
-      body: _pageList[context.watch<NavigationModel>().currentIndex],
+      body: _pageList[context.watch<NavigationViewModel>().currentIndex()],
       bottomNavigationBar: BottomNavigationBar(
-          onTap: (int index) => context.read<NavigationModel>().update(index),
-          currentIndex: context.watch<NavigationModel>().currentIndex,
+          onTap: (int index) =>
+              context.read<NavigationViewModel>().update(index),
+          currentIndex: context.watch<NavigationViewModel>().currentIndex(),
           items: const [
             BottomNavigationBarItem(
                 icon: Icon(Icons.monetization_on_outlined), label: '現在高'),
