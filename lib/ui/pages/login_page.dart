@@ -1,4 +1,6 @@
+import 'package:bank_app/viewmodel/auth_view_model.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -13,6 +15,11 @@ class _LoginPageState extends State<LoginPage> {
 
   @override
   void initState() {
+    final authViewModel = Provider.of<AuthViewModel>(context, listen: false);
+    authViewModel.loginAction.stream.listen((event) {
+      Navigator.of(context).pushReplacementNamed('/root');
+    });
+
     super.initState();
   }
 
@@ -52,8 +59,7 @@ class _LoginPageState extends State<LoginPage> {
                 onPressed: () async {
                   if (_formKey.currentState.validate()) {
                     print('loading...');
-                    await Future<void>.delayed(const Duration(seconds: 2));
-                    Navigator.pushReplacementNamed(context, '/root');
+                    await context.read<AuthViewModel>().login();
                   }
                 },
                 child: const Text('login!'),
