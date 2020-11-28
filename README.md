@@ -1,6 +1,8 @@
 # bank_app
 
-A new Flutter application.
+Flutter で `MVVM` やる練習。
+
+`Provider` + `ChangeNotifier` + `Stream` でやっていきます。
 
 ## Getting Started
 
