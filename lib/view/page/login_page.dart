@@ -59,7 +59,9 @@ class _LoginPageState extends State<LoginPage> {
                 onPressed: () async {
                   if (_formKey.currentState.validate()) {
                     print('loading...');
-                    await context.read<AuthViewModel>().login();
+                    await context
+                        .read<AuthViewModel>()
+                        .login(_userController.text, _emailController.text);
                   }
                 },
                 child: const Text('login!'),

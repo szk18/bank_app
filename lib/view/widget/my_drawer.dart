@@ -1,5 +1,7 @@
 import 'package:bank_app/view/widget/my_web_view.dart';
+import 'package:bank_app/viewmodel/auth_view_model.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class MyDrawer extends StatelessWidget {
   final _listItems = ['FAQ', 'お知らせ', '設定', 'アプリについて'];
@@ -11,10 +13,11 @@ class MyDrawer extends StatelessWidget {
         color: Colors.blue,
         child: ListView(
           children: [
-            const UserAccountsDrawerHeader(
-                accountName: Text('account name'),
-                accountEmail: Text('account email'),
-                currentAccountPicture: CircleAvatar(
+            UserAccountsDrawerHeader(
+                accountName: Text(context.watch<AuthViewModel>().authUser.name),
+                accountEmail:
+                    Text(context.watch<AuthViewModel>().authUser.email),
+                currentAccountPicture: const CircleAvatar(
                   backgroundColor: Colors.white,
                   child: Icon(Icons.credit_card_outlined),
                 ),

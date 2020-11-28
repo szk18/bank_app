@@ -14,8 +14,8 @@ class AuthViewModel extends ChangeNotifier {
 
   StreamController<Event> get loginAction => _authController;
 
-  Future<void> login() async {
-    _authUser = await AuthRepository().login();
+  Future<void> login(String name, String email) async {
+    _authUser = await AuthRepository().login(name, email);
     notifyListeners();
     _authController.sink.add(Event());
   }
