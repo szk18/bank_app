@@ -1,7 +1,7 @@
 import 'dart:async';
 
-import 'package:bank_app/models/event.dart';
-import 'package:bank_app/models/user.dart';
+import 'package:bank_app/model/event.dart';
+import 'package:bank_app/model/user.dart';
 import 'package:bank_app/repository/auth_repository.dart';
 import 'package:flutter/cupertino.dart';
 

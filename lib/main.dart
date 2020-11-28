@@ -1,7 +1,7 @@
 import 'package:bank_app/common/theme.dart';
-import 'package:bank_app/models/navigation_model.dart';
-import 'package:bank_app/ui/pages/login_page.dart';
-import 'package:bank_app/ui/pages/root.dart';
+import 'package:bank_app/model/navigation_model.dart';
+import 'package:bank_app/ui/page/login_page.dart';
+import 'package:bank_app/ui/page/root.dart';
 import 'package:bank_app/viewmodel/auth_view_model.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';

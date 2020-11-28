@@ -1,8 +1,8 @@
-import 'package:bank_app/models/navigation_model.dart';
-import 'package:bank_app/ui/pages/detail_page.dart';
-import 'package:bank_app/ui/pages/graph_page.dart';
-import 'package:bank_app/ui/pages/home_page.dart';
-import 'package:bank_app/ui/widgets/my_drawer.dart';
+import 'package:bank_app/model/navigation_model.dart';
+import 'package:bank_app/ui/page/detail_page.dart';
+import 'package:bank_app/ui/page/graph_page.dart';
+import 'package:bank_app/ui/page/home_page.dart';
+import 'package:bank_app/ui/widget/my_drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

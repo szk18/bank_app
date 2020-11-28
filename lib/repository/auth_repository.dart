@@ -1,4 +1,4 @@
-import 'package:bank_app/models/user.dart';
+import 'package:bank_app/model/user.dart';
 
 class AuthRepository {
   Future<User> login() async {

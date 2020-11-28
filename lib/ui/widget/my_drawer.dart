@@ -1,4 +1,4 @@
-import 'package:bank_app/ui/widgets/my_web_view.dart';
+import 'package:bank_app/ui/widget/my_web_view.dart';
 import 'package:flutter/material.dart';
 
 class MyDrawer extends StatelessWidget {
