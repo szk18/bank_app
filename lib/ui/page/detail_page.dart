@@ -1,4 +1,4 @@
-import 'package:bank_app/common/theme.dart';
+import 'package:bank_app/config/theme.dart';
 import 'package:flutter/material.dart';
 
 class DetailPage extends StatelessWidget {

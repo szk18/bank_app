@@ -1,4 +1,4 @@
-import 'package:bank_app/common/theme.dart';
+import 'package:bank_app/config/theme.dart';
 import 'package:bank_app/model/navigation_model.dart';
 import 'package:bank_app/ui/page/login_page.dart';
 import 'package:bank_app/ui/page/root.dart';

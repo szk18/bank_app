@@ -1,4 +1,4 @@
-import 'package:bank_app/common/theme.dart';
+import 'package:bank_app/config/theme.dart';
 import 'package:charts_flutter/flutter.dart' as charts;
 import 'package:flutter/material.dart';
 
