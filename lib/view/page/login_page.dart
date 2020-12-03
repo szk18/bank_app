@@ -15,11 +15,6 @@ class _LoginPageState extends State<LoginPage> {
 
   @override
   void initState() {
-    final authViewModel = Provider.of<AuthViewModel>(context, listen: false);
-    authViewModel.loginAction.stream.listen((_) {
-      Navigator.of(context).pushReplacementNamed('/root');
-    });
-
     super.initState();
   }
 
