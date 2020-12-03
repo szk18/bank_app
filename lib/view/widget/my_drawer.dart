@@ -21,11 +21,15 @@ class MyDrawer extends StatelessWidget {
                   backgroundColor: Colors.white,
                   child: Icon(Icons.credit_card_outlined),
                 ),
-                decoration: BoxDecoration(color: Colors.lightBlue)),
+                decoration: const BoxDecoration(color: Colors.lightBlue)),
             ListTile(
-              onTap: () => context.read<AuthViewModel>().logout(),
-              title: const Text('logout'),
-            ),
+                onTap: () => context.read<AuthViewModel>().logout(),
+                title: const Text(
+                  'logout',
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold, color: Colors.white),
+                )),
+            Divider(color: Theme.of(context).dividerColor),
             SizedBox(
               height: double.maxFinite, // 高さを指定する
               child: ListView.separated(
